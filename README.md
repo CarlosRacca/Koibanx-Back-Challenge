@@ -10,4 +10,4 @@ En este proyecto se utilizaron las tecnologias Node JS junto con Express y Mongo
 
 __Consideraciones__:
 
-Para correr el programa primero hay que hacer un npm install y luego un npm start.
+Para correr el programa primero hay que hacer un npm install y tambien se debe instalar mocha para correr los test y nodemon para que el comando npm start funcione.

@@ -15,15 +15,16 @@ app.set('port', 3000);
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-// app.use(basicAuth({
-//     usuario: 'test@koibanx.com', 
-//     contraseña: 'test123'
-// }));
+app.use(basicAuth({
+    users: { 'test@koibanx.com': 'test123' }
+}));
 
 //Routes
 app.use(require('./routes/index'));
 
 //Start the server
 app.listen(app.get('port'), () => {
-    console.log('Listening in port', app.get('port'));
+    console.log('Server on port', app.get('port'));
 });
+
+module.exports = app
